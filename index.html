@@ -8,8 +8,8 @@
       Tutorial Case
 
       Red Ball Pizza Survey Form
-      Author: 
-      Date:   
+      Author: Paige Mabbitt
+      Date:  1.7.19 
 
       Filename:   index.html
 
@@ -20,6 +20,7 @@
     <title>Red Ball Survey</title>
     <link href="rb_reset.css" rel="stylesheet" />
     <link href="rb_styles.css" rel="stylesheet" />
+    <link href="rb_forms.css" rel="stylesheet" />
     <script src="rb_formsubmit.js"></script>
 
 </head>
@@ -58,21 +59,45 @@
 
             <fieldset id=‘custInfo’>
                 <legend>Customer Information</legend>
+                <div class="formRow">
+                    <label for="name">Name*</label>
+                    <input name="custName" id="name" type="text" placeholder="First and last name">
+                </div>
+                <div class="formRow">
+                    <label for="street">Street Adress</label>
+                    <input name="custStreet" id="street" type="text">
+                </div>
+                <div class="formRow">
+                    <label for="city">City</label>
+                    <input name="custCity" id="city" type="text" value="Ormond Beach">
+                </div>
+                <div class="formRow">
+                    <label for=" state">State</label>
+                    <input name="custState" id="state" type="text" value="FL">
+                </div>
+                <div class="formRow">
+                    <label for="zip">Postal Code</label>
+                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)">
+                </div>
+                <div class="formRow">
+                    <label for="phone">Phone Number</label>
+                    <input name="custPhone" id="phone" type="phone" placeholder="(nnn)-nnn-nnnn">
+                </div>
+                <div class="formRow">
+                    <label for="mail">Email*</label>
+                    <input name="custEmail" id="mail" type="email">
+                </div>
 
-                <label for="name">Name*</label>
-                <input name="custName" id="name" type="text" placeholder="First and last name">
-                <label for="street">Street Adress</label>
-                <input name="custStreet" id="street" type="text">
-                <label for="city">City</label>
-                <input name="custCity" id="city" type="text" value="Ormond Beach">
-                <label for=" state">State</label>
-                <input name="custState" id="state" type="text" value="FL">
-                <label for="zip">Postal Code</label>
-                <input name="custZip" id="zip" type="text" placeholder="nnnnnnnnn (-nnnn)">
-                <label for="phone">Phone Number</label>
-                <input name="custPhone" id="phone" type="tel" placeholder="(nnn)-nnn-nnnn">
-                <label for="mail">Email*</label>
-                <input name="custEmail" id="mail" type="email">
+                <div class="formRow">
+                    <label>Where did you hear about us? <br> (Select all that apply)</label>
+                    <select name="infoSrc" id="info" size="5" multiple>
+                        <option value="internet">Internet</option>
+                        <option value="mag">Magazine</option>
+                        <option value="news">Newspaper</option>
+                        <option value="word">Word of mouth</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
             </fieldset>
 
