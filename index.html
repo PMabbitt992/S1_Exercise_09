@@ -61,7 +61,7 @@
                 <legend>Customer Information</legend>
                 <div class="formRow">
                     <label for="name">Name*</label>
-                    <input name="custName" id="name" type="text" placeholder="First and last name">
+                    <input name="custName" id="name" type="text" placeholder="First and last name" required>
                 </div>
                 <div class="formRow">
                     <label for="street">Street Adress</label>
@@ -77,15 +77,16 @@
                 </div>
                 <div class="formRow">
                     <label for="zip">Postal Code</label>
-                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)">
+                    <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$">
                 </div>
                 <div class="formRow">
                     <label for="phone">Phone Number</label>
-                    <input name="custPhone" id="phone" type="phone" placeholder="(nnn)-nnn-nnnn">
+                    <input name="custPhone" id="phone" type="phone" placeholder="(nnn)-nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
                 </div>
-                <div class="formRow">
+                <div class="
+                        formRow">
                     <label for="mail">Email*</label>
-                    <input name="custEmail" id="mail" type="email">
+                    <input name="custEmail" id="mail" type="email" required>
                 </div>
 
                 <div class="formRow">
@@ -110,14 +111,15 @@
                         <option value="Pasta Rolls">
                         <option value="Pasta Artichoke Pizza">
                     </datalist>
+                </div>
 
-                    <div class="formRow">
-                        <label for="dineSpin">How many times do you dine out per month?</label>
-                        <input name="dineOut" id="dineSpin" type="number" value"1" step="1" min="0" max="20" />
-                    </div>
+                <div class="formRow">
+                    <label for="dineSpin">How many times do you dine out per month?</label>
+                    <input name="dineOut" id="dineSpin" type="number" value"1" step="1" min="0" max="20" />
+                </div>
 
-                    <input name="mailMe" id="mailCB" value="yes" type="checkbox">
-                    <label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
+                <input name="mailMe" id="mailCB" value="yes" type="checkbox">
+                <label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
 
             </fieldset>
 
